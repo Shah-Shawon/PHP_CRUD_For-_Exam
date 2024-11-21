@@ -1,13 +1,11 @@
-@extends('layout')
-@section('page-content')
-    
+@extends('layout',['title'=>'Show'])
 
-		<p>
-        <a href="{{url('books/')}}"> Back </a>
+    @section('page-content')
+    <p>
+        <a href="{{route('books.index')}}">Back</a>
     </p>
-    
-    <h2>Book List</h2>
-    <table  border="2" class=table table-striped>
+    <h2>Book Details</h2>
+    <table class ='table table-striped'>
         <tr>
             <th>ID </th>
             <td>{{$book->id}}</td>
@@ -43,5 +41,4 @@
 
 
     </table>
-
-@endsection
+    @endsection
