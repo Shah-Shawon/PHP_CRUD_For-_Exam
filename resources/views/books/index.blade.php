@@ -3,10 +3,19 @@
     @section('page-content')
     <h2>Book List</h2>
 
-    <div class="row mt-2">
 
+    <div class="row mt-2">
         <div class="col-lg-10">
-            Scarch Functionality
+            <form method="get" action="{{route('books.index')}}">
+                <div class="row g-3">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-success">Scarch</button>
+                    </div>
+                </div>
+            </form>
         </div>
 
         <div class="col-lg-2">
